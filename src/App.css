@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #240046 0%, #5a189a 50%, #9d4edd 100%);
+  overflow: hidden;
+  cursor: pointer;
+  
+  /* Mobile optimizations */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  canvas {
+    touch-action: none;
+  }
+}
+
+/* Prevent mobile scroll bounce */
+html, body {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
